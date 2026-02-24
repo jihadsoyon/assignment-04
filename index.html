@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment Four</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <header class="w-[80%] mx-auto">
+  <h1 class="text-4xl text-[#002C5C] font-bold mb-5">Job Application Tracker</h1>
+  <div class="grid grid-cols-3 gap-5">
+    <div class="bg-white shadow p-4 rounded">
+      <p class="font-semibold">Total</p>
+      <p id="total" class="text-[#002C5C] font-bold text-2xl">0</p>
+    </div>
+    <div class="bg-white shadow p-4 rounded">
+      <p class="font-semibold">Interview</p>
+      <p id="interviewCount" class="text-[#10B981] font-bold text-2xl">0</p>
+    </div>
+    <div class="bg-white shadow p-4 rounded">
+      <p class="font-semibold">Rejected</p>
+      <p id="rejectedCount" class="text-[#EF4444] font-bold text-2xl">0</p>
+    </div>
+  </div>
+  </header>
+  
+ <hr class="w-[80%] mx-auto my-5 text-[#E6E7E9]">
+
+ <main class="w-[80%] mx-auto">
+  <div class="flex justify-between">
+    <div><h2 class="text-[#002C5C] font-bold text-2xl">Available Jobs</h2></div>
+    <div><p id="availableCount" class="text-[#323B49] font-semibold text-[18px]">0 Jobs</p></div>
+  </div>
+<div class="my-6">
+  <button onclick="toggleStyle('all-filter-btn')" class="bg-[#3B82F6] text-white shadow rounded py-2 px-6 cursor-pointer" id="all-filter-btn">All</button>
+  <button onclick="toggleStyle('interview-filter-btn')" class="bg-white shadow rounded py-2 px-6 cursor-pointer" id="interview-filter-btn">Interview</button>
+  <button onclick="toggleStyle('rejected-filter-btn')" class="bg-white shadow rounded py-2 px-6 cursor-pointer" id="rejected-filter-btn">Rejected</button>
+</div>
+
+
+ </main>
+
+  <script src="./vanilla.js"></script>
+</body>
+</html>

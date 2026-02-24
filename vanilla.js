@@ -1,5 +1,6 @@
 let interviewList = [];
 let rejectedList = [];
+let currentStatus = 'all'
 
 let total = document.getElementById('total');
 let interviewCount = document.getElementById('interviewCount')
@@ -128,6 +129,30 @@ mainContainer.addEventListener('click', function (event) {
     }
     calculateCount();
   }
+
+  else if (event.target.closest('.fa-trash-can')) {
+
+  const card = event.target.closest('.card');
+  const cardHeader = card.querySelector('.cardHeader').innerText;
+
+  // remove from interviewlist
+  interviewList = interviewList.filter(item => item.cardHeader !== cardHeader);
+
+  // remove from rejectedlist
+  rejectedList = rejectedList.filter(item => item.cardHeader !== cardHeader);
+  card.remove();
+
+  if (currentStatus === 'interview-filter-btn') {
+    renderInterview();
+  }
+  else if (currentStatus === 'rejected-filter-btn') {
+    renderRejected();
+  }
+
+
+  calculateCount();
+  renderEmptyAll();
+}
 
 })
 

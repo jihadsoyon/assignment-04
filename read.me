@@ -1,0 +1,45 @@
+1. What is the difference between getElementById, getElementsByClassName, and querySelector / querySelectorAll?
+
+* getElementById diye amra jekhane id use kora ache  oita element collect kore. Eta (single element) reutn kore.
+* getElementsByClassName diye amra jekhane jekhane class use kora ache oitar element collect kore. Eta (HTML Collection) return kore.
+* querySelector diye amra jekono ekta single element collect kore. 1st e jeta milbe oitay dibe . Etau (single element) return kore.
+* querySelectorAll diyte amra matching all element collect korte pari. Jetake amra nodelist hishebe chini.
+
+2. How do you create and insert a new element into the DOM?
+
+* createElement , add, innerHtml, appendchild er maddhomeu korte pari
+
+3. What is Event Bubbling? And how does it work?
+
+* event bubbling holo jekhane kono dom element e event trigger hole sheti child theke parent er dike uthe jay.
+
+*  Dom e kono event trigger hole target element theke shuru hoi first e nijer listener execeute kore tar pore parent, grand parent e propagate kore uporer dike chole jay document porjonto
+
+* Like This: 
+DOM tree: button → div → body → html → document
+Click korle first e button, tarpor div, tarpor body … eivabe chole jay...
+
+4. What is Event Delegation in JavaScript? Why is it useful?
+ 
+* Event Delegation holo JavaScript-er emon ekti technique jekhane amra onekgulo child element-er jonno alada alada event listener na diye tader parent  element-e ektay event listener boshay.
+
+* Onekgulo element thakle alada alada listener na diye ekta listener bebohar kora jay.
+ Kom code, bar bare repeat kora lage na.
+
+5.What is the difference between preventDefault() and stopPropagation() methods?
+
+* preventDefault() eta element er default behaviour bondho kore.
+* stopPropagation() eta event bubbling ba capturing stop kore. Mane event ar parent element e jabe na.
+
+
+
+
+
+
+
+
+
+
+
+
+
